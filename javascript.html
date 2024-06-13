@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguaje JavaScript</title>
+    <!--link para agragar icono en pestaña de título-->
+    <link rel="icon" href="img/javascript.png">
+    <!--Para definir estilo con archivo css-->
+    <link rel="stylesheet" href="css/estilobasico.css">
+
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <p>
+        <img src="img/javascript.jpg" alt="Imagen JavaScript" align="right" 
+          width="350" height="200">
+          JavaScript (JS) es un lenguaje de programación ligero, interpretado, 
+        o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. 
+        Si bien es más conocido como un lenguaje de scripting 
+        (secuencias de comandos) para páginas web, y es usado en muchos 
+        entornos fuera del navegador, tal como <strong>Node.js, Apache CouchDB y 
+        Adobe Acrobat</strong>. JavaScript es un lenguaje de programación 
+        basada en prototipos, multiparadigma, de un solo hilo, dinámico, 
+        con soporte para programación orientada a objetos, imperativa y 
+        declarativa (por ejemplo programación funcional).
+        <!-- Comentarios en html-->
+    </p>
+    <hr>
+    <h1>Variables en JavaScript</h1>
+    <p>
+        Una variable es un depósito donde hay un valor. Consta de un nombre y 
+        pertenece a un tipo (númerico, cadena de caracteres, lógico etc.)
+    </p>
+    Para declarar variables se utiliza:
+    <table border="1">
+        <tr> <th>Palabra reservada</th> <th>Descripción</th> </tr>
+        <tr> <td>let</td><td>Varable locale o de bloque</td></tr>
+        <tr> <td>var</td><td>Varable globales o generales</td></tr>
+        <tr> <td>const</td><td>Valores que no cambian (constante)</td></tr>
+    </table>
+    <hr>
+    Ejemplo de variables de JavaScript:
+    <pre class="recuadro">
+        <code>
+            let nombre='Juan';
+            document.write(nombre);
+            let nombre=10;
+            document.write(edad);
+        </code>
+    </pre>
+    Para poder incluir un script en html se utiliza:
+    <pre class="recuadro">
+        <code>
+            &lt;script src="codigo.js"&gt;
+            document.write('Hola');
+            &lt;/script&gt;
+        </code>
+    </pre>
+
+    <h1>Ejemplos:</h1>
+   
+    <ol>
+        <li><a href="saludo.html">Saludo simple saludo.js</a></li>
+        <li><a href="ingreso.html">Ingresando datos </a></li>
+        <li><a href="calculadora.html">Calculadora de subred </a></li>
+        <li><a href="maps.html">Mapa GoogleMaps </a></li>
+        <li><a href="arreglos.html">Arreglo y Bootstrap </a></li>
+        <li><a href="formulario1.html">Ejemplo 1 de formulario con Bootstrap </a></li>
+        <li><a href="formulario2.html">Ejemplo 2 de formulario con Bootstrap, validadi </a></li>
+    </ol>
+
+    <pre class="recuadro">
+        <code id="htmlCode">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Document&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Hello, World!&lt;/h1&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+
+    <button onclick="copyToClipboard()">Copiar código</button>
+        
+    <script>
+        function copyToClipboard() {
+            const codeElement = document.getElementById('htmlCode');
+            const text = codeElement.textContent;
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Código copiado al portapapeles');
+            }, function(err) {
+                console.error('Error al copiar el código: ', err);
+            });
+        }
+    </script>
+
+    <br>
+
+    <a href="https://eloquentjs-es.thedojo.mx/Eloquent_JavaScript.pdf" target="_blank" rel="noopener noreferrer">Libro Java Script</a>
+        
+    
+</body>
+</html>
